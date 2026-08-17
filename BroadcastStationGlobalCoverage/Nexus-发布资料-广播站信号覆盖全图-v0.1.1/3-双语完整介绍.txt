@@ -1,0 +1,163 @@
+[size=5][b]Broadcast Station Global Coverage[/b][/size]
+
+[b]English[/b]
+
+This BepInEx 5 Mono mod lets televisions find and use a working broadcast station from anywhere on the map. It changes only the television's manual and automatic broadcast-source selection paths.
+
+[b]Features[/b]
+[list]
+[*]Televisions can discover broadcast stations across the entire map.
+[*]Manual station selection includes every broadcast station on the map.
+[*]Automatic selection chooses the nearest working broadcast station without a signal-distance cutoff.
+[*]No configuration file, hotkey, or additional UI is required.
+[/list]
+
+[b]What This Mod Does Not Change[/b]
+[list]
+[*]The distance at which citizens can use a television remains unchanged.
+[*]Broadcast-station and television electrical connection ranges remain unchanged.
+[*]Broadcast-station range controls remain available and retain their original electrical purpose.
+[*]The global custom-building range limit is not modified.
+[*]Building and save-data range fields are not modified.
+[/list]
+
+[b]Requirements[/b]
+[list]
+[*]Ratopia for Windows using the Mono scripting backend.
+[*]BepInEx 5.4.23.5.
+[*]The release was checked against Assembly-CSharp.dll SHA-256: C94847D858EED368D2082E9715D0C79DD79309631BEF861C6BEBD467306D6E1D.
+[/list]
+
+If Ratopia updates and the assembly hash changes, disable the mod until compatibility has been confirmed.
+
+[b]Installation[/b]
+[list=1]
+[*]Install BepInEx 5 and launch the game once.
+[*]Close Ratopia.
+[*]Extract the archive into the Ratopia game folder.
+[*]Confirm that the final DLL path is BepInEx/plugins/BroadcastStationGlobalCoverage/BroadcastStationGlobalCoverage.dll.
+[*]Launch the game and search BepInEx/LogOutput.log for Broadcast Station Global Coverage or the Chinese plugin name.
+[/list]
+
+[b]Uninstallation[/b]
+
+Close Ratopia, then delete BepInEx/plugins/BroadcastStationGlobalCoverage. The mod creates no configuration file and does not take ownership of building-range save fields.
+
+[b]Save Safety[/b]
+[list]
+[*]The mod does not patch save or load methods.
+[*]It does not write to BuildingData.m_Range, Building.m_Range, or BuildInfo.Range.
+[*]Backing up important saves before installing or removing any mod is still recommended.
+[/list]
+
+[b]Compatibility and Conflicts[/b]
+
+This mod may conflict with other mods that patch either of these game methods:
+[list]
+[*]UI_StorageSelect.TelevisionSelectSet
+[*]Building_ElecBandstand.Building_Update2
+[/list]
+
+Some other mods intentionally alter the electrical grid. For example, the Omega-7 Quantum Grid feature from the Special Ratizens mod is designed to merge grids and connect out-of-range electrical buildings. Long-distance electrical wires caused by that feature are independent of Broadcast Station Global Coverage.
+
+[b]Troubleshooting[/b]
+[list]
+[*]Confirm that you installed BepInEx 5, not BepInEx 6.
+[*]Confirm that the DLL is in the exact plugin path shown above.
+[*]Check BepInEx/LogOutput.log for plugin discovery, both Harmony patch messages, and exceptions.
+[*]If television selection is modified by another mod, temporarily disable that mod and retest.
+[*]If you see map-wide electrical wires, check for an active grid-changing feature such as Omega-7's Quantum Grid; this mod does not extend electrical range.
+[/list]
+
+[b]Version 0.1.1[/b]
+[list]
+[*]Removed all writes to shared building-range fields.
+[*]Restored the original range-control entry and electrical connection behavior.
+[*]Limited full-map behavior to television broadcast-source selection.
+[/list]
+
+[b]Verification Status[/b]
+
+The v0.1.1 Release build passes 21 automated tests. Its archive structure and forbidden-DLL scan pass, and BepInEx has been verified loading the plugin and installing both Harmony patches without logged errors. Full save/reload and uninstall regression testing remains recommended for each user's mod setup.
+
+[size=5][b]广播站信号覆盖全图[/b][/size]
+
+[b]中文[/b]
+
+这是一个适用于《鼠托邦》的 BepInEx 5 Mono Mod，让地图任意位置的电视都能发现并使用正在工作的广播站。本 Mod 只接管电视的手动选台与自动信号源选择入口。
+
+[b]主要功能[/b]
+[list]
+[*]电视可以发现全图范围内的广播站。
+[*]手动选台列表包含地图上的所有广播站。
+[*]自动选台不受信号距离限制，并选择最近的工作广播站。
+[*]不需要配置文件、快捷键或额外界面。
+[/list]
+
+[b]本 Mod 不会修改[/b]
+[list]
+[*]居民使用电视的服务距离保持原版。
+[*]广播站和电视的电路连接范围保持原版。
+[*]广播站的范围设置入口继续保留，并维持原版电路用途。
+[*]不修改全局自定义建筑范围上限。
+[*]不修改建筑实例或存档中的范围字段。
+[/list]
+
+[b]运行要求[/b]
+[list]
+[*]Windows 版《鼠托邦》，Mono 脚本后端。
+[*]BepInEx 5.4.23.5。
+[*]本版本已针对以下 Assembly-CSharp.dll SHA-256 检查：C94847D858EED368D2082E9715D0C79DD79309631BEF861C6BEBD467306D6E1D。
+[/list]
+
+如果游戏更新后程序集哈希发生变化，请先停用本 Mod，等待兼容性确认。
+
+[b]安装方法[/b]
+[list=1]
+[*]安装 BepInEx 5，并至少启动一次游戏。
+[*]关闭《鼠托邦》。
+[*]将压缩包解压到游戏根目录。
+[*]确认 DLL 最终路径为 BepInEx/plugins/BroadcastStationGlobalCoverage/BroadcastStationGlobalCoverage.dll。
+[*]启动游戏，在 BepInEx/LogOutput.log 中搜索“广播站信号覆盖全图”。
+[/list]
+
+[b]卸载方法[/b]
+
+关闭游戏后，删除 BepInEx/plugins/BroadcastStationGlobalCoverage。本 Mod 不创建配置文件，也不接管建筑范围存档字段。
+
+[b]存档安全[/b]
+[list]
+[*]不补丁保存或读档方法。
+[*]不写入 BuildingData.m_Range、Building.m_Range 或 BuildInfo.Range。
+[*]安装或卸载任何 Mod 前，仍建议备份重要存档。
+[/list]
+
+[b]兼容性与冲突[/b]
+
+本 Mod 可能与补丁以下游戏方法的其他 Mod 冲突：
+[list]
+[*]UI_StorageSelect.TelevisionSelectSet
+[*]Building_ElecBandstand.Building_Update2
+[/list]
+
+其他 Mod 可能会主动改变电网行为。例如，“特殊鼠鼠”Mod 中奥米伽-7的“量子电网”本来就会合并电网，并让范围外电力建筑接入超级电网。该特性产生的远距离电线与“广播站信号覆盖全图”无关。
+
+[b]故障排查[/b]
+[list]
+[*]确认安装的是 BepInEx 5，而不是 BepInEx 6。
+[*]确认 DLL 位于上文所示的准确路径。
+[*]检查 BepInEx/LogOutput.log 中的插件发现、两个 Harmony 补丁安装记录和异常信息。
+[*]如果其他 Mod 也修改电视选台，请暂时停用该 Mod 后复测。
+[*]如果出现全图远距离电线，请检查奥米伽-7“量子电网”等电网修改效果是否已启用；本 Mod 不扩大电路范围。
+[/list]
+
+[b]版本 0.1.1[/b]
+[list]
+[*]移除对所有共享建筑范围字段的写入。
+[*]恢复原版范围调节入口与电路连接行为。
+[*]全图效果仅作用于电视的广播信号源选择。
+[/list]
+
+[b]验证状态[/b]
+
+v0.1.1 Release 构建已通过 21 项自动测试，发布包结构和禁止 DLL 扫描已通过；BepInEx 已验证能够发现插件并无异常地安装两个 Harmony 补丁。考虑到每位玩家的 Mod 组合不同，仍建议自行完成保存、重新读档和卸载回归检查。

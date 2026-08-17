@@ -1,0 +1,165 @@
+[center][size=6][b]Stronger Work Distance[/b][/size]
+[i]Let ratizens use their tools from farther away.[/i]
+
+[b]English[/b][/center]
+
+[size=5][b]Overview[/b][/size]
+
+Stronger Work Distance expands the shared ratizen tool-work positions to 2 tiles horizontally and up to 4 tiles high. The expanded area is a complete 25-position rectangle, including the farther diagonal positions.
+
+The original 12 positions remain first in the list, so vanilla-reachable positions keep their original pathfinding preference. The additional positions are appended after them.
+
+[size=5][b]Features[/b][/size]
+
+[list]
+[*]Expands horizontal tool reach from 1 tile to 2 tiles on either side.
+[*]Expands vertical tool reach from 3 tiles to 4 tiles high.
+[*]Includes all diagonal positions in the expanded rectangle.
+[*]Uses the complete coordinate range x=-2..2 and y=+1..-3.
+[*]Updates both the normal work-position list and the shared ladder/special-blueprint work-position list.
+[*]Applies the same fixed range to every ratizen using those shared tool-work lists.
+[/list]
+
+[size=5][b]Affected Work[/b][/size]
+
+This mod is intended for ratizen tool work that uses the game's shared work-position tables, including mining, construction, demolition, repair, and work using the shared blueprint positions.
+
+It does not change the Queen's interaction distance, combat range, building effect radius, or save-file format.
+
+[size=5][b]Requirements and Compatibility[/b][/size]
+
+[list]
+[*]Ratopia for Windows, Mono build.
+[*]BepInEx 5.4.23.5.
+[*].NET Framework 4.7.2 runtime target.
+[*]Built against Harmony 2.9.0.0.
+[*]Inspected Assembly-CSharp.dll SHA-256: C94847D858EED368D2082E9715D0C79DD79309631BEF861C6BEBD467306D6E1D.
+[/list]
+
+BepInEx, Harmony, Unity, and game assemblies are not included in the download. A game update that changes Assembly-CSharp.dll may require a compatibility update for this mod.
+
+[size=5][b]Installation[/b][/size]
+
+[list=1]
+[*]Close Ratopia completely.
+[*]Back up important saves before installing any mod.
+[*]Install BepInEx 5 if it is not already installed.
+[*]Extract the downloaded ZIP into the Ratopia game directory and keep its folder structure.
+[*]Confirm the plugin is located at BepInEx/plugins/StrongerWorkDistance/StrongerWorkDistance.dll.
+[*]Launch the game and check BepInEx/LogOutput.log for the plugin name and the work-distance application message.
+[/list]
+
+Do not overwrite the DLL while Ratopia is running, and do not install duplicate copies of the same plugin.
+
+[size=5][b]Save Compatibility[/b][/size]
+
+The mod only replaces two in-memory work-position lists after SystemMgr starts: SystemMgr.List_WM_EnableArea and SystemMgr.List_BP_Ld_EnableArea. It does not add or write custom fields to save files.
+
+Removing the mod and restarting the game allows the vanilla initialization code to restore the default work positions. Backing up important saves is still recommended before installing any mod.
+
+[size=5][b]Uninstallation[/b][/size]
+
+[list=1]
+[*]Close Ratopia completely.
+[*]Delete BepInEx/plugins/StrongerWorkDistance, or move that plugin folder outside BepInEx/plugins.
+[*]Restart Ratopia. The vanilla work-position lists will be created again during initialization.
+[/list]
+
+[size=5][b]Known Conflicts[/b][/size]
+
+Other mods that directly modify SystemMgr.List_WM_EnableArea, SystemMgr.List_BP_Ld_EnableArea, or patch SystemMgr.Awake may overwrite this mod's result. When troubleshooting, test without other work-range mods and review the BepInEx patch order in the log.
+
+[size=5][b]Troubleshooting[/b][/size]
+
+Check BepInEx/LogOutput.log for the following Chinese messages:
+
+[list]
+[*]“更强大的工作距离 0.1.0 补丁安装完成。” confirms that the Harmony patch was installed.
+[*]“工作距离已应用” confirms that the two work-position lists were processed.
+[/list]
+
+When reporting a problem, include LogOutput.log, the Ratopia version, the exact work type, and a screenshot showing that no closer alternative standing position exists.
+
+[hr]
+
+[center][size=6][b]更强大的工作距离[/b][/size]
+[i]让鼠民站得更远也能使用工具工作。[/i]
+
+[b]中文[/b][/center]
+
+[size=5][b]概述[/b][/size]
+
+“更强大的工作距离”将鼠民共用的工具工作站位扩大到横向 2 格、最高 4 格。扩展后的范围是完整的 25 个站位矩形，并包含远端斜角位置。
+
+原版 12 个站位及其顺序会保留在列表前部，因此原版可达位置仍保持原有的寻路优先级；新增站位依次追加在后。
+
+[size=5][b]功能[/b][/size]
+
+[list]
+[*]工具横向工作距离由 1 格扩大到左右各 2 格。
+[*]纵向最高工作距离由 3 格扩大到 4 格。
+[*]包含扩展矩形内的全部斜角站位。
+[*]完整坐标范围为 x=-2..2、y=+1..-3。
+[*]同时更新常规工作站位表和梯子/特殊蓝图共用站位表。
+[*]所有使用这两张通用工具工作表的鼠民使用同一固定范围。
+[/list]
+
+[size=5][b]影响的工作[/b][/size]
+
+本 Mod 面向所有使用游戏通用工作站位表的鼠民工具工作，包括采矿、建造、拆除、维修，以及使用共用蓝图站位的工作。
+
+本 Mod 不修改女王操作距离、战斗射程、建筑效果范围或存档格式。
+
+[size=5][b]环境要求与兼容性[/b][/size]
+
+[list]
+[*]Windows 版 Ratopia，Mono 构建。
+[*]BepInEx 5.4.23.5。
+[*]目标运行时为 .NET Framework 4.7.2。
+[*]基于 Harmony 2.9.0.0 构建。
+[*]开发时检查的 Assembly-CSharp.dll SHA-256：C94847D858EED368D2082E9715D0C79DD79309631BEF861C6BEBD467306D6E1D。
+[/list]
+
+下载包不包含 BepInEx、Harmony、Unity 或游戏程序集。若游戏更新导致 Assembly-CSharp.dll 发生变化，本 Mod 可能需要兼容性更新。
+
+[size=5][b]安装[/b][/size]
+
+[list=1]
+[*]完全关闭 Ratopia。
+[*]安装任何 Mod 前，先备份重要存档。
+[*]如果尚未安装，请先安装 BepInEx 5。
+[*]将下载的 ZIP 解压到 Ratopia 游戏目录，并保留压缩包内的目录结构。
+[*]确认插件位于 BepInEx/plugins/StrongerWorkDistance/StrongerWorkDistance.dll。
+[*]启动游戏，在 BepInEx/LogOutput.log 中查找插件名称和工作距离应用信息。
+[/list]
+
+请勿在 Ratopia 运行时覆盖 DLL，也不要重复安装同一插件的多个副本。
+
+[size=5][b]存档兼容性[/b][/size]
+
+本 Mod 仅在 SystemMgr 启动后替换两张内存工作站位表：SystemMgr.List_WM_EnableArea 与 SystemMgr.List_BP_Ld_EnableArea。本 Mod 不读取或写入存档字段，也不会向存档添加自定义数据。
+
+移除 Mod 并重新启动游戏后，原版初始化逻辑会重新建立默认工作站位。即使如此，安装任何 Mod 前仍建议备份重要存档。
+
+[size=5][b]卸载[/b][/size]
+
+[list=1]
+[*]完全关闭 Ratopia。
+[*]删除 BepInEx/plugins/StrongerWorkDistance，或将该插件文件夹移出 BepInEx/plugins。
+[*]重新启动 Ratopia，原版工作站位表会在初始化期间重新建立。
+[/list]
+
+[size=5][b]已知冲突[/b][/size]
+
+其他直接修改 SystemMgr.List_WM_EnableArea、SystemMgr.List_BP_Ld_EnableArea，或补丁 SystemMgr.Awake 的 Mod 可能覆盖本 Mod 的结果。排查时请暂时停用其他工作距离 Mod，并检查 BepInEx 日志中的补丁顺序。
+
+[size=5][b]故障排查[/b][/size]
+
+请在 BepInEx/LogOutput.log 中查找以下信息：
+
+[list]
+[*]“更强大的工作距离 0.1.0 补丁安装完成。”表示 Harmony 补丁已安装。
+[*]“工作距离已应用”表示两张工作站位表已经处理。
+[/list]
+
+报告问题时，请附上 LogOutput.log、Ratopia 版本、具体工作类型，以及能证明附近没有更近替代站位的截图。

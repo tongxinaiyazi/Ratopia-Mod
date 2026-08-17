@@ -1,0 +1,8 @@
+bin/
+obj/
+artifacts/
+dist/
+TestResults/
+Nexus-发布资料-*/
+*.user
+*.suo

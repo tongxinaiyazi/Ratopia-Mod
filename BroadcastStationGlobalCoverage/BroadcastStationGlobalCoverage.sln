@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BroadcastStationGlobalCoverage", "src\BroadcastStationGlobalCoverage\BroadcastStationGlobalCoverage.csproj", "{0CC49BF3-CA68-48AA-AAD7-5BDB90D7C594}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BroadcastStationGlobalCoverage.Tests", "tests\BroadcastStationGlobalCoverage.Tests\BroadcastStationGlobalCoverage.Tests.csproj", "{BF9FB86A-3748-4A4F-93EA-F4093DA58790}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CC49BF3-CA68-48AA-AAD7-5BDB90D7C594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CC49BF3-CA68-48AA-AAD7-5BDB90D7C594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CC49BF3-CA68-48AA-AAD7-5BDB90D7C594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CC49BF3-CA68-48AA-AAD7-5BDB90D7C594}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF9FB86A-3748-4A4F-93EA-F4093DA58790}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF9FB86A-3748-4A4F-93EA-F4093DA58790}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF9FB86A-3748-4A4F-93EA-F4093DA58790}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF9FB86A-3748-4A4F-93EA-F4093DA58790}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
+

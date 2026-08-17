@@ -1,0 +1,89 @@
+[b]English[/b]
+
+[b]Restroom & Bathhouse Fun[/b] adds a small quality-of-life bonus to two completed hygiene services:
+
+[list]
+[*]Regular restroom: +25 Fun by default.
+[*]Bathhouse: +30 Fun by default.
+[*]Rewards are granted only after the service finishes normally.
+[*]Electric toilets are not affected.
+[*]The original 0–100 Fun cap is preserved.
+[/list]
+
+[b]Configuration[/b]
+
+After the first launch, edit:
+[code]BepInEx/config/cn.ratopia.restroombathfun.cfg[/code]
+
+[code]
+[Rewards]
+ToiletFunReward = 25
+BathsFunReward = 30
+[/code]
+
+Both values accept 0–100. Close the game before editing and restart it after changes. There is no in-game settings panel or live reload.
+
+[b]Requirements[/b]
+
+[list]
+[*]Ratopia Mono build matching the inspected Assembly-CSharp.dll contract
+[*]BepInEx 5 (developed against 5.4.23.5)
+[/list]
+
+[b]Installation[/b]
+
+Close Ratopia and extract the ZIP directly into the game root. The plugin must end up at:
+[code]BepInEx/plugins/RestroomBathFun/RestroomBathFun.dll[/code]
+
+[b]Uninstallation and saves[/b]
+
+Close the game and delete the RestroomBathFun plugin folder. The Mod adds no save fields and does not intentionally modify save data. Keep backups of important saves in any modded setup.
+
+[b]Compatibility and verification[/b]
+
+Mods patching the same service-completion method, replacing restroom/bathhouse service flows, or rewriting Fun may conflict. This package has passed unit, static assembly-contract, Release-build, and package-layout checks. It has not been tested in-game, so no runtime, save/reload, or uninstall acceptance claim is made. Check [code]BepInEx/LogOutput.log[/code] when troubleshooting.
+
+[b]中文[/b]
+
+[b]卫生间澡堂加乐趣[/b]会在两种卫生服务正常完成后提供一点额外乐趣：
+
+[list]
+[*]普通卫生间：默认 +25 乐趣。
+[*]澡堂：默认 +30 乐趣。
+[*]只有服务正常完成才发放奖励，中断或取消不奖励。
+[*]电动卫生间不生效。
+[*]沿用原版 0–100 乐趣上限。
+[/list]
+
+[b]配置[/b]
+
+首次启动后编辑：
+[code]BepInEx/config/cn.ratopia.restroombathfun.cfg[/code]
+
+[code]
+[Rewards]
+ToiletFunReward = 25
+BathsFunReward = 30
+[/code]
+
+两个值均接受 0–100。请先关闭游戏，修改后重启游戏。本 Mod 没有游戏内设置页面，也不支持运行中热重载。
+
+[b]需求[/b]
+
+[list]
+[*]符合已检查 Assembly-CSharp.dll 合同的 Ratopia Mono 版本
+[*]BepInEx 5（开发环境为 5.4.23.5）
+[/list]
+
+[b]安装[/b]
+
+关闭 Ratopia，将 ZIP 直接解压到游戏根目录。DLL 最终路径应为：
+[code]BepInEx/plugins/RestroomBathFun/RestroomBathFun.dll[/code]
+
+[b]卸载与存档[/b]
+
+关闭游戏后删除 RestroomBathFun 插件文件夹。本 Mod 不新增存档字段，也不会主动修改存档数据；任何 Mod 环境仍建议备份重要存档。
+
+[b]兼容性与验证范围[/b]
+
+补丁相同服务结束方法、替换卫生间/澡堂服务流程或重写乐趣逻辑的 Mod 可能冲突。本发布包已通过单元测试、静态程序集合同、Release 构建和包结构检查，但未进行游戏内实机验收，因此不宣称已完成运行时、存读档或卸载验收。排错时请检查 [code]BepInEx/LogOutput.log[/code]。
