@@ -1,9 +1,12 @@
 using System;
 using System.Collections.Generic;
 using BepInEx;
+using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
+using ResearchAndTradeOptimization.Core;
 using ResearchAndTradeOptimization.Patches;
+using UnityEngine;
 
 namespace ResearchAndTradeOptimization
 {
@@ -16,6 +19,8 @@ namespace ResearchAndTradeOptimization
 
         private static ManualLogSource _runtimeLog;
         private Harmony _harmony;
+        private ConfigEntry<string> _activeTradeColorEntry;
+        private ConfigEntry<string> _infiniteTradeColorEntry;
 
         private static readonly IReadOnlyList<Type> PatchTypes = new[]
         {
@@ -40,10 +45,15 @@ namespace ResearchAndTradeOptimization
             typeof(QuarterlyTradePricePatch)
         };
 
+        internal static Color ActiveTradeHighlightColor { get; private set; }
+
+        internal static Color InfiniteTradeHighlightColor { get; private set; }
+
         private void Awake()
         {
             _runtimeLog = Logger;
             _harmony = new Harmony(PluginGuid);
+            BindConfiguration();
 
             try
             {
@@ -62,6 +72,53 @@ namespace ResearchAndTradeOptimization
                 _harmony = null;
                 enabled = false;
             }
+        }
+
+        private void BindConfiguration()
+        {
+            try
+            {
+                _activeTradeColorEntry = Config.Bind(
+                    TradeResourceStateRules.ConfigSection,
+                    TradeResourceStateRules.ActiveTradeColorKey,
+                    TradeResourceStateRules.ActiveTradeColorDefault,
+                    "国家详情进出口列表中，有限期贸易商品的高亮背景色（RGB，格式 R,G,B，范围 0-255）。");
+
+                _infiniteTradeColorEntry = Config.Bind(
+                    TradeResourceStateRules.ConfigSection,
+                    TradeResourceStateRules.InfiniteTradeColorKey,
+                    TradeResourceStateRules.InfiniteTradeColorDefault,
+                    "国家详情进出口列表中，无限期贸易商品的高亮背景色（RGB，格式 R,G,B，范围 0-255）。");
+
+                ActiveTradeHighlightColor = ToUnityColor(
+                    _activeTradeColorEntry.Value,
+                    TradeResourceStateRules.DefaultHighlightColor);
+                InfiniteTradeHighlightColor = ToUnityColor(
+                    _infiniteTradeColorEntry.Value,
+                    TradeResourceStateRules.DefaultInfiniteHighlightColor);
+            }
+            catch (Exception exception)
+            {
+                ActiveTradeHighlightColor = ToUnityColor(
+                    null,
+                    TradeResourceStateRules.DefaultHighlightColor);
+                InfiniteTradeHighlightColor = ToUnityColor(
+                    null,
+                    TradeResourceStateRules.DefaultInfiniteHighlightColor);
+                Logger.LogError($"读取贸易高亮颜色配置失败，已使用默认颜色：{exception}");
+            }
+        }
+
+        private static Color ToUnityColor(
+            string text,
+            TradeHighlightColor fallback)
+        {
+            var parsed = TradeResourceStateRules.ParseColorOrDefault(text, fallback);
+            return new Color(
+                parsed.Red / 255f,
+                parsed.Green / 255f,
+                parsed.Blue / 255f,
+                1f);
         }
 
         private void OnDestroy()

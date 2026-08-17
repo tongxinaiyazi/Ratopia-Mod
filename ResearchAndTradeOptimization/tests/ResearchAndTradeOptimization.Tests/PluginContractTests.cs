@@ -150,6 +150,10 @@ namespace ResearchAndTradeOptimization.Tests
                     "ResearchAndTradeOptimization.Runtime.TradeQueueRuntime",
                     "UpdateWorldDetailLabel");
                 AssertCalls(
+                    FindMethod(module, "ResearchAndTradeOptimization.Patches.TradeWorldDetailPatch", "Postfix"),
+                    "ResearchAndTradeOptimization.Runtime.TradeResourceStateRuntime",
+                    "ApplyActiveTradeHighlight");
+                AssertCalls(
                     FindMethod(module, "ResearchAndTradeOptimization.Patches.TradeResourcePreviewPatch", "Prefix"),
                     "ResearchAndTradeOptimization.Runtime.TradeResourcePreviewRuntime",
                     "LimitVisibleItems");
@@ -687,6 +691,95 @@ namespace ResearchAndTradeOptimization.Tests
                 Assert.DoesNotContain(ensure.Body.Instructions, instruction =>
                     instruction.Operand is FieldReference field &&
                     field.FullName == "UnityEngine.RectTransform TechNode::Tf");
+            }
+        }
+
+        [Fact]
+        public void TradeResourceStateRuntimeHighlightsOnlyVisibleTradingSlots()
+        {
+            using (var module = ModuleDefinition.ReadModule(GetPluginAssemblyPath()))
+            {
+                var runtime = FindType(
+                    module,
+                    "ResearchAndTradeOptimization.Runtime.TradeResourceStateRuntime");
+                var apply = FindMethod(
+                    module,
+                    runtime.FullName,
+                    "ApplyActiveTradeHighlight");
+
+                AssertCalls(
+                    apply,
+                    "ResearchAndTradeOptimization.Runtime.TradeResourceStateRuntime",
+                    "ApplyToLayout");
+                Assert.NotEmpty(apply.Body.ExceptionHandlers);
+
+                var applyToLayout = FindMethod(
+                    module,
+                    runtime.FullName,
+                    "ApplyToLayout");
+                AssertCalls(
+                    applyToLayout,
+                    "ResearchAndTradeOptimization.Runtime.TradeResourceStateRuntime",
+                    "GetHighlightKind");
+                AssertCalls(
+                    applyToLayout,
+                    "ResearchAndTradeOptimization.Runtime.TradeResourceStateRuntime",
+                    "ShowHighlight");
+                AssertCalls(
+                    applyToLayout,
+                    "ResearchAndTradeOptimization.Runtime.TradeResourceStateRuntime",
+                    "HideHighlight");
+
+                var getKind = FindMethod(
+                    module,
+                    runtime.FullName,
+                    "GetHighlightKind");
+                AssertCalls(
+                    getKind,
+                    "CasselGames.Diplomatic.Data.DiplomaticCountryData",
+                    "get_Sheets");
+                AssertCalls(
+                    getKind,
+                    "CasselGames.Diplomatic.Data.DiplomaticCountryTradeSheetData",
+                    "get_Resource");
+                AssertCalls(
+                    getKind,
+                    "CasselGames.Diplomatic.Data.DiplomaticCountryTradeSheetData",
+                    "IsEnded");
+                AssertCalls(
+                    getKind,
+                    "CasselGames.Diplomatic.Data.DiplomaticCountryTradeSheetData",
+                    "IsInfinitePeriod");
+                AssertCalls(
+                    getKind,
+                    "ResearchAndTradeOptimization.Core.TradeResourceStateRules",
+                    "GetHighlightKind");
+
+                var show = FindMethod(
+                    module,
+                    runtime.FullName,
+                    "ShowHighlight");
+                AssertCalls(
+                    show,
+                    "ResearchAndTradeOptimization.Runtime.TradeResourceStateRuntime",
+                    "GetOrCreateBackground");
+                AssertCalls(show, "UnityEngine.UI.Graphic", "set_color");
+
+                var create = FindMethod(
+                    module,
+                    runtime.FullName,
+                    "GetOrCreateBackground");
+                AssertCalls(create, "UnityEngine.GameObject", ".ctor");
+                AssertCalls(create, "UnityEngine.Transform", "SetParent");
+                AssertCalls(create, "UnityEngine.Transform", "SetAsFirstSibling");
+                AssertCalls(create, "UnityEngine.RectTransform", "set_anchorMin");
+                AssertCalls(create, "UnityEngine.RectTransform", "set_anchorMax");
+                AssertCalls(create, "UnityEngine.RectTransform", "set_offsetMin");
+                AssertCalls(create, "UnityEngine.RectTransform", "set_offsetMax");
+                AssertCalls(create, "UnityEngine.UI.Graphic", "set_raycastTarget");
+
+                Assert.DoesNotContain(runtime.Methods, method =>
+                    method.Name == "Postfix" || method.Name == "Prefix");
             }
         }
 
