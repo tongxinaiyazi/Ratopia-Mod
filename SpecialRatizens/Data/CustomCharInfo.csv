@@ -1,0 +1,25 @@
+﻿Category,Name,T_Name,EffectValue_A,EffectValue_B,Description
+0,NaiNai_Wisdom,奈奈的智慧,1,0,奈奈酱充满了智慧 <sprite name=FS_Exp> 经验获取 <color=#1E8A00>+100%</color>
+1,NaiNai_Benevolence,奈奈的关爱,2,0,每一只鼠鼠都十分喜欢奈奈酱 <sprite name=FS_Happiness> 市民的幸福度 <color=#1E8A00>+ 三维/2</color>
+0,LB_Sad,联邦的哀伤,-50,0,吃饭现在对嘤联邦来说是一件痛苦的事情 <sprite name=FS_Happiness> 幸福度 <color=#C83232>-50</color>
+1,LB_Hope,联邦的希望,1,3,修习了神秘的炼金术，每次吃饭会产出 <color=#1E8A00>(三维/3)~(三维/2)</color>金矿石，<sprite name=FS_HungerTime> 食物消耗速度 <color=#C83232>+100%</color>
+1,SY_KCL,垦草令,10,30,城市每贮存10倍人口食物时 <sprite name=FS_Happiness> 市民的幸福度 <color=#1E8A00>+1</color> (至多+30)
+1,SY_QL,秦律,2,0,可颁布的法典数量增加 <color=#1E8A00>[智力-初始智力+当前城市等级/2]</color>
+1,YF_YJQ,岳家枪,100,0,装备长枪时，攻击可造成0.5倍范围伤害并恢复 <color=#1E8A00>伤害*手艺/100</color> 生命值
+1,YF_YJJ,岳家军,0,0,所有士兵攻击力 <color=#1E8A00>+5</color>、防御力 <color=#1E8A00>+3</color>、移动速度 <color=#1E8A00>+30%</color>
+1,HT_SYZS,神医在世,0,0,所有市民在非受伤状态下受到致命伤害时，<color=#1E8A00>不会直接死亡</color>
+1,HT_WQX,五禽戏,0,0,所有市民 <sprite name=FS_Health> 最大生命 <color=#1E8A00>+50</color>、<sprite name=FS_Productivity> 工作效率 <color=#1E8A00>+20%</color>、<sprite name=FS_Speed> 移动速度 <color=#1E8A00>+10%</color>
+1,WH_NC,牛车,10,4,与他国贸易的距离缩短 <color=#1E8A00>[10 + (手艺-初始手艺)*4]%</color>
+1,WH_SZ,商祖,2,0,与他国贸易的协议数量增加 <color=#1E8A00>[智力-初始智力+当前城市等级/2]</color>
+1,BG_NYQY,能以取予,10,0,物品出口价格降低 <color=#C83232>[(1-(智力-10)/(智力-9))*100]%</color>，与他国贸易 <color=#1E8A00>快速增加他国繁荣值</color>
+1,BG_SS,商圣,2,0,食物贸易价格<color=#C83232>秋降</color><color=#1E8A00>冬涨</color>[智力*2]%，日用品贸易价格<color=#C83232>春降</color><color=#1E8A00>夏涨</color>[智力*2]%
+1,LLJ_KYSS,开元盛世,2,0,所有非单人服务业可同时服务的人数增加 <color=#1E8A00>[智力-初始智力+当前城市等级/2]</color>
+1,LLJ_LY,梨园,10,1.5,所有市民的娱乐需求提高 <color=#C83232>[(1-(智力-10)/(智力-9))*100]%</color>，工作效率提升 <color=#1E8A00>[智力*1.5]%</color>
+1,DZ_MGJZ,蘑菇教主,10,5,蘑菇农场的生产速度增加 <color=#1E8A00>[10 + (智力-初始智力)*5]%</color>
+1,DZ_MGZL,蘑菇之力,0,0,所有市民食用含有蘑菇的食物后，<sprite name=FS_FatigueTime> 体力消耗减少 <color=#1E8A00>+30%</color>、<sprite name=FS_Productivity> 工作效率 <color=#1E8A00>+10%</color>、<sprite name=FS_Speed> 移动速度 <color=#1E8A00>+10%</color>
+1,ZY_QTSPQ,七探蛇盘枪,1.5,0,装备长枪时，攻击可造成0.5倍范围伤害并击退敌方
+1,ZY_LD,龙胆,0.3,50,自身移动速度 <color=#1E8A00>+30%</color>、闪避 <color=#1E8A00>+50%</color>
+1,PKQ_SWFT,十万伏特,2,15,在发电站工作时，<color=#1E8A00>[(力量+智力)*2]%</color> 概率额外增加 <color=#1E8A00>[力量*(智力/2~智力*2)]</color> 电力，<color=#C83232>[15-智力]%</color> 概率损坏建筑
+1,PKQ_DQCD,电气场地,1,10,工作时溢出的电力将恢复皮卡丘的体力，并使所有市民移动速度 <color=#1E8A00>+[敏捷]%</color>
+1,AMJ7_LZDW,量子电网,3,0,将自身与所有电网及电力建筑连接，并使所有电力使用效率 <color=#1E8A00>+[三维/3]% </color>
+1,AMJ7_LZJX,量子机械,50,3,奥米伽-7无法死亡，与所有机械单位连接共享电力，并使其获得 <color=#1E8A00>[50+三维/3]%</color> 自身三维

@@ -1,0 +1,30 @@
+# Build outputs
+bin/
+obj/
+out/
+*.exe
+*.dll
+*.pdb
+*.zip
+*.log
+
+# IDE / user files
+*.user
+*.suo
+*.userprefs
+.idea/
+.vscode/
+*.code-workspace
+
+# Packaging / temporary artifacts
+dist/
+backups/
+.downloads/
+
+# Skill / runtime metadata
+.superpowers/
+
+# OS junk
+Thumbs.db
+Desktop.ini
+.DS_Store

@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YunQingAll", "src\YunQingAll\YunQingAll.csproj", "{E393168A-E456-427B-9B8F-910D64FA96A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YunQingAll.Tests", "tests\YunQingAll.Tests\YunQingAll.Tests.csproj", "{78F13D00-688E-409B-B844-F62F621AA82E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E393168A-E456-427B-9B8F-910D64FA96A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E393168A-E456-427B-9B8F-910D64FA96A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E393168A-E456-427B-9B8F-910D64FA96A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E393168A-E456-427B-9B8F-910D64FA96A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78F13D00-688E-409B-B844-F62F621AA82E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78F13D00-688E-409B-B844-F62F621AA82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78F13D00-688E-409B-B844-F62F621AA82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78F13D00-688E-409B-B844-F62F621AA82E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

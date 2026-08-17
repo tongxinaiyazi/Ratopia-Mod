@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>UnlimitedTradeAgreements</AssemblyName>
+    <RootNamespace>UnlimitedTradeAgreements</RootNamespace>
+    <Version>0.1.0</Version>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <FileVersion>0.1.0.0</FileVersion>
+    <InformationalVersion>0.1.0</InformationalVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <InstallAfterBuild Condition="'$(InstallAfterBuild)' == ''">false</InstallAfterBuild>
+    <RatopiaDir Condition="'$(RatopiaDir)' == ''">$(RATOPIA_DIR)</RatopiaDir>
+    <GameManagedDir>$(RatopiaDir)\Ratopia_Data\Managed</GameManagedDir>
+    <BepInExCoreDir>$(RatopiaDir)\BepInEx\core</BepInExCoreDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp" HintPath="$(GameManagedDir)\Assembly-CSharp.dll" Private="false" />
+    <Reference Include="BepInEx" HintPath="$(BepInExCoreDir)\BepInEx.dll" Private="false" />
+    <Reference Include="0Harmony" HintPath="$(BepInExCoreDir)\0Harmony.dll" Private="false" />
+    <Reference Include="UnityEngine" HintPath="$(GameManagedDir)\UnityEngine.dll" Private="false" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="$(GameManagedDir)\UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="UnityEngine.UI" HintPath="$(GameManagedDir)\UnityEngine.UI.dll" Private="false" />
+    <Reference Include="Unity.TextMeshPro" HintPath="$(GameManagedDir)\Unity.TextMeshPro.dll" Private="false" />
+  </ItemGroup>
+
+  <Target Name="ValidateRatopiaReferences" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(GameManagedDir)\Assembly-CSharp.dll')" Text="找不到鼠托邦程序集。请通过 /p:RatopiaDir=游戏目录 指定正确路径。" />
+    <Error Condition="!Exists('$(BepInExCoreDir)\BepInEx.dll')" Text="找不到 BepInEx 5。请确认 RatopiaDir 指向已安装 BepInEx 的游戏目录。" />
+    <Error Condition="!Exists('$(BepInExCoreDir)\0Harmony.dll')" Text="找不到 Harmony。请确认 BepInEx 安装完整。" />
+  </Target>
+
+  <Target Name="InstallPlugin" AfterTargets="Build" Condition="'$(Configuration)' == 'Release' and '$(InstallAfterBuild)' == 'true'">
+    <PropertyGroup>
+      <PluginInstallDir>$(RatopiaDir)\BepInEx\plugins\UnlimitedTradeAgreements</PluginInstallDir>
+    </PropertyGroup>
+    <MakeDir Directories="$(PluginInstallDir)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(PluginInstallDir)" />
+  </Target>
+</Project>

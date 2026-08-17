@@ -1,0 +1,13 @@
+﻿name,nameColor,LockStatus,UnitGender,grade,pow,dex,wit,gold,char1,icon1,char2,icon2,probability,skin,face,bread,dress,glasses,hair,hat,makeup
+奈奈酱,#ffa8f8,Unlock,Female,2,10,10,10,2000,NaiNai_Wisdom,Icon_Exp,NaiNai_Benevolence,Icon_SunReligionHappy,300,White,Face_13,,Dress_211,Glasses_6,Hair_35,Hat_201,
+伟大嘤联邦,#ffbe4c,Unlock,Male,2,1,1,1,0,LB_Sad,Icon_DieHunger,LB_Hope,Icon_Char127,300,White,Face_17,,Dress_210,,Hair_38,,
+商鞅,#6caeff,Unlock,Male ,1,3,6,12,300,SY_KCL,Icon_Wiki_Plant,SY_QL,Icon_Scroll_Trade,50,Gary,Face_5,Bread_2,Dress_230,,Hair_6,,
+岳飞,#f44c4c,Unlock,Male ,0,15,10,8,500,YF_YJQ,Icon_YJQ,YF_YJJ,Icon_BattleOrder,10,Black,Face_4,,Dress_218,,Hair_24,Hat_118,
+华佗,#6caeff,Unlock,Male ,1,6,12,8,200,HT_SYZS,Icon_Health,HT_WQX,Icon_WQX,50,White,Face_3,,Dress_199,Glasses_19,Hair_28,,
+王亥,#f44c4c,Unlock,Male ,0,6,10,8,5000,WH_NC,Icon_NC,WH_SZ,Icon_Tax_Citizen,10,White,Face_11,,Dress_140,Glasses_14,Hair_6,,
+白圭,#f44c5c,Unlock,Male ,0,4,6,14,5000,BG_NYQY,Icon_Trade,BG_SS,Icon_SS,10,White,Face_2,,Dress_121,Glasses_2,Hair_39,,
+李隆基,#f44c5c,Unlock,Male ,0,9,12,15,3000,LLJ_KYSS,Icon_KYSS,LLJ_LY,Icon_LY,10,White,Face_10,,Dress_139,Glasses_1,Hair_41,,
+大正,#ffbe4c,Unlock,Male ,2,3,5,12,300,DZ_MGJZ,MushroomObject,DZ_MGZL,Armadilo rice,30,Gary,Face_3,,Dress_232,,Hair_32,Hat_148,Makeup_18
+赵云,#f44c4c,Unlock,Male ,2,12,15,8,500,ZY_QTSPQ,Icon_QTSPQ,ZY_LD,Icon_Dodge,5,White,Face_6,,Dress_217,,Hair_5,Hat_117,
+皮卡丘,#f44c4c,Unlock,Male ,2,5,5,5,500,PKQ_SWFT,Icon_ElectricPower,PKQ_DQCD,Icon_WirelessCharge,5,Brown,Face_17,,Dress_169,Glasses_26,Hair_0,Hat_3,Makeup_15
+奥米伽-7,#f44c4c,Unlock,Male ,2,15,15,15,1000,AMJ7_LZDW,Icon_TeslaConnect,AMJ7_LZJX,Icon_LZJX,5,Gbot2,Face_GBot2,,Dress_252,,Hair_41,Hat_173,

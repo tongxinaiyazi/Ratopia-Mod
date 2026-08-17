@@ -1,0 +1,176 @@
+[center][size=6][b]Population Customizer[/b][/size]
+[size=3]Per-save Ratizen and Ratron limits for Ratopia[/size][/center]
+
+[size=5][b]English[/b][/size]
+
+[b]Population Customizer[/b] adds an in-game panel for setting separate Ratizen and Ratron population limits. Each save keeps its own settings, and both limits can be configured from [b]0 to 999[/b].
+
+[size=4][b]Features[/b][/size]
+
+[list]
+[*]Separate custom limits for Ratizens and Ratrons.
+[*]Supported range: [b]0–999[/b]. A value of 0 prevents additional units of that type from being added.
+[*]Settings are stored independently in each save.
+[*]Editing a number automatically enables the corresponding custom-limit toggle.
+[*]Changes take effect immediately in the population display and the game's recruitment/manufacturing limit checks.
+[*]Lowering a limit never removes, kills, or dismisses existing units. It only prevents further additions while the current count is at or above the limit.
+[*]A Restore Vanilla button removes this Mod's setting from the current save and returns to Ratopia's dynamic vanilla limits.
+[/list]
+
+[size=4][b]How to use[/b][/size]
+
+[list=1]
+[*]Enter a save.
+[*]Click the vanilla population counter to open the citizen list.
+[*]Click [b]Limit[/b] immediately to the left of the search button.
+[*]Enter the desired Ratizen and/or Ratron limit. Editing a value automatically enables its custom toggle.
+[*]Click [b]Apply to Current Save[/b].
+[*]Use Ratopia's normal save function so the setting is written to disk.
+[/list]
+
+[size=4][b]Requirements and compatibility[/b][/size]
+
+[list]
+[*]Ratopia Mono edition.
+[*]BepInEx 5. Tested build target: BepInEx 5.4.23.5, Harmony 2.9.0 and .NET Framework 4.7.2.
+[*]Built against Assembly-CSharp.dll SHA-256: [code]C94847D858EED368D2082E9715D0C79DD79309631BEF861C6BEBD467306D6E1D[/code]
+[*]Mods patching [code]ProsperityUI.GetMaxCitizenCount()[/code], [code]SystemMgr.GetGBotMaxCount()[/code], or [code]StatisticsCitizenListUI.Initialize()[/code] may conflict. If another Mod also provides infinite or multiplied population limits, disable that duplicate feature or choose which Mod should control the final cap.
+[/list]
+
+The installed Ratopia Citizen List Update Mod uses a different recruitment-list target and was observed loading alongside Population Customizer. This is not a blanket compatibility guarantee for every version.
+
+[size=4][b]Installation[/b][/size]
+
+[list=1]
+[*]Close Ratopia completely.
+[*]Back up important saves before installing or updating Mods.
+[*]Install BepInEx 5 if it is not already installed.
+[*]Extract the ZIP directly into the Ratopia game folder.
+[/list]
+
+The final DLL path must be:
+[code]Ratopia\BepInEx\plugins\PopulationCustomizer\PopulationCustomizer.dll[/code]
+
+[size=4][b]Save data and uninstallation[/b][/size]
+
+The Mod stores one versioned value in Ratopia's reserved [code]D_Data.ModsData[/code] container under:
+[code]cn.ratopia.populationcustomizer.settings[/code]
+
+Population Customizer does not rewrite the Ratizen or Ratron unit lists and does not force a game save. After applying or restoring a setting, save normally through Ratopia.
+
+For a clean removal, open each affected save, click [b]Restore Vanilla[/b], save normally, close the game, and delete:
+[code]BepInEx\plugins\PopulationCustomizer\PopulationCustomizer.dll[/code]
+
+Vanilla Ratopia ignores unknown Mod keys. If the DLL is removed without restoring first, the saved key remains dormant and may become active again if the Mod is reinstalled. Full removal-without-DLL save compatibility has not been claimed as an in-game acceptance test; keep a backup of important saves.
+
+[size=4][b]Performance warning[/b][/size]
+
+Very high populations can substantially increase CPU usage, pathfinding work, simulation load, memory use, and save times. The maximum value of 999 is an input limit, not a performance recommendation. Increase population gradually and keep backups.
+
+[size=4][b]Troubleshooting[/b][/size]
+
+[list]
+[*]Check [code]Ratopia\BepInEx\LogOutput.log[/code] for the [code]人口自定义 v0.1.3 已加载[/code] entry and the per-save loaded-limit message.
+[*]If a number was saved but the vanilla limit remains active, reopen the panel, edit the number, confirm the custom toggle is enabled, click Apply, and save normally.
+[*]The error [code]Prosperity level data error, level 9 > database length 0[/code] / [code]繁荣等级数据错误，等级 9 > 库长度 0[/code] originates from the Special Ratizens Mod's Qin Law trait initialization, not Population Customizer.
+[*]After a Ratopia update, verify compatibility before continuing an important save.
+[/list]
+
+[size=4][b]Version 0.1.3[/b][/size]
+
+[list]
+[*]Added automatic custom-toggle activation when a limit value is edited.
+[*]Loads per-save settings after Ratopia has assigned the loaded game data.
+[*]Adds explicit load/apply diagnostics to the BepInEx log.
+[*]Keeps the Limit entry in the citizen-list header beside the search button.
+[/list]
+
+[center]This is an unofficial community Mod and is not affiliated with the developers or publisher of Ratopia.[/center]
+
+[center]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/center]
+
+[size=5][b]中文[/b][/size]
+
+[b]人口自定义[/b]为《鼠托邦》增加一个游戏内设置面板，可以分别调整鼠民与机器鼠的人口上限。每个存档独立保存设置，两类上限均可设为 [b]0–999[/b]。
+
+[size=4][b]功能[/b][/size]
+
+[list]
+[*]鼠民和机器鼠分别设置自定义上限。
+[*]允许范围为 [b]0–999[/b]；设置为 0 表示不再允许新增该类单位。
+[*]每个存档独立保存配置。
+[*]手动编辑数值时会自动启用对应的“自定义”开关。
+[*]应用后立即影响人口显示以及原版招募、制造上限判定。
+[*]降低上限不会删除、杀死或赶走任何现有单位；当前数量达到或超过上限时只会阻止继续新增。
+[*]“恢复原版”只移除当前存档中属于本 Mod 的设置，并重新使用原版动态上限。
+[/list]
+
+[size=4][b]使用方法[/b][/size]
+
+[list=1]
+[*]进入存档。
+[*]点击原版人口数量，打开鼠民名单。
+[*]点击名单顶部放大镜按钮左侧的“上限”。
+[*]输入希望使用的鼠民和／或机器鼠上限；编辑数值时会自动勾选对应的“自定义”。
+[*]点击“应用到当前存档”。
+[*]使用原版保存功能正常保存，使设置写入磁盘。
+[/list]
+
+[size=4][b]需求与兼容性[/b][/size]
+
+[list]
+[*]Ratopia Mono 版本。
+[*]需要 BepInEx 5。目标环境为 BepInEx 5.4.23.5、Harmony 2.9.0、.NET Framework 4.7.2。
+[*]构建时验证的 Assembly-CSharp.dll SHA-256：[code]C94847D858EED368D2082E9715D0C79DD79309631BEF861C6BEBD467306D6E1D[/code]
+[*]其他同时修改 [code]ProsperityUI.GetMaxCitizenCount()[/code]、[code]SystemMgr.GetGBotMaxCount()[/code] 或 [code]StatisticsCitizenListUI.Initialize()[/code] 的 Mod 可能冲突。如果其他 Mod 也提供无限人口或人口翻倍，请关闭重复功能，或明确选择由哪个 Mod 控制最终上限。
+[/list]
+
+实机日志曾观察到 Ratopia Citizen List Update Mod 与人口自定义同时载入，但这不代表对其所有版本作出全面兼容保证。
+
+[size=4][b]安装[/b][/size]
+
+[list=1]
+[*]完全退出 Ratopia。
+[*]安装或更新 Mod 前备份重要存档。
+[*]如果尚未安装，请先安装 BepInEx 5。
+[*]把 ZIP 直接解压到 Ratopia 游戏根目录。
+[/list]
+
+最终 DLL 路径应为：
+[code]Ratopia\BepInEx\plugins\PopulationCustomizer\PopulationCustomizer.dll[/code]
+
+[size=4][b]存档与卸载[/b][/size]
+
+本 Mod 在原版预留的 [code]D_Data.ModsData[/code] 容器内写入一个版本化值，键名为：
+[code]cn.ratopia.populationcustomizer.settings[/code]
+
+人口自定义不会重写鼠民或机器鼠单位列表，也不会强制调用原版保存。应用或恢复设置后，请通过 Ratopia 正常保存。
+
+如需干净卸载，请依次进入受影响的存档，点击“恢复原版”，正常保存，退出游戏，然后删除：
+[code]BepInEx\plugins\PopulationCustomizer\PopulationCustomizer.dll[/code]
+
+原版会忽略未知的 Mod 键。如果未先恢复原版便移除 DLL，配置键会留在存档中，并可能在重新安装后再次生效。目前没有把“移除 DLL 后继续读档”表述为已经完成的实机验收；重要存档请保留备份。
+
+[size=4][b]性能警告[/b][/size]
+
+极高人口会明显增加 CPU 占用、寻路与模拟负担、内存消耗和存档时间。999 只是输入上限，不是推荐值。请逐步提高人口并定期备份。
+
+[size=4][b]故障排查[/b][/size]
+
+[list]
+[*]检查 [code]Ratopia\BepInEx\LogOutput.log[/code]，确认出现“人口自定义 v0.1.3 已加载”和当前存档上限读取记录。
+[*]如果数值已保存但仍使用原版上限，请重新打开面板、编辑数值、确认“自定义”已勾选、点击应用，然后正常保存。
+[*]错误 [code]繁荣等级数据错误，等级 9 > 库长度 0[/code] 来自“特殊鼠鼠”Mod 的“秦律”特性初始化，并非人口自定义。
+[*]Ratopia 更新后，请先验证兼容性再继续使用重要存档。
+[/list]
+
+[size=4][b]版本 0.1.3[/b][/size]
+
+[list]
+[*]编辑上限数值时自动启用对应的自定义开关。
+[*]改为在原版载入存档数据后读取每存档设置。
+[*]在 BepInEx 日志中增加明确的读取和应用记录。
+[*]“上限”入口固定在鼠民名单顶部搜索按钮旁。
+[/list]
+
+[center]本 Mod 为非官方社区作品，与《鼠托邦》的开发商及发行商无隶属关系。[/center]

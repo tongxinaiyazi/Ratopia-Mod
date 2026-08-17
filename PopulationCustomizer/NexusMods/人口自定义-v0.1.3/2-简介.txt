@@ -1,0 +1,3 @@
+Set separate per-save population limits for Ratizens and Ratrons from 0 to 999, directly from the citizen list. Existing units are never removed when you lower a limit. Requires BepInEx 5.
+
+可在鼠民名单中为每个存档分别设置鼠民和机器鼠上限（0–999）。降低上限不会删除现有单位。需要 BepInEx 5。

@@ -1,0 +1,179 @@
+[center][size=6][b]Super Bow[/b][/size]
+[i]A focused combat upgrade for the Queen's vanilla Wood Bow.[/i]
+
+[b]English[/b][/center]
+
+[size=5][b]Overview[/b][/size]
+
+Super Bow raises the Queen's Wood Bow base ATK from 2 to 3, matching the Noble Sword, and adds two new reforge outcomes: Splash Damage and Bleed.
+
+The mod keeps the original bow's direct hit, critical hit, range and attack-speed behavior. It only adds the new reforge effects after the vanilla arrow has confirmed a real damaging hit.
+
+[size=5][b]Features[/b][/size]
+
+[list]
+[*][b]Stronger Wood Bow:[/b] Base ATK increased from 2 to 3.
+[*][b]Reforge 1 - Splash Damage:[/b] A confirmed hit damages other valid targets within 1.5 tiles for 50% of the arrow's direct damage.
+[*][b]No splash recursion:[/b] Splash damage cannot trigger another splash wave.
+[*][b]Reforge 2 - Bleed:[/b] Direct hits and successful splash hits apply Bleed.
+[*][b]Normal targets:[/b] Bleed deals 3% of maximum health once per second for 3 seconds.
+[*][b]Boss targets:[/b] Only enemies marked EnemyCategory.Boss use the reduced 1% value.
+[*][b]Consistent damage numbers:[/b] Percentage damage is rounded to the nearest integer, with 0.5 rounded up and positive damage dealing at least 1. Actual health loss and the floating damage number are identical.
+[*][b]Refresh, do not stack:[/b] Repeated hits refresh the three-second duration without creating additional Bleed stacks or delaying the next scheduled tick.
+[*][b]Pause-aware timing:[/b] Bleed uses scaled game time and does not tick while the game is paused.
+[/list]
+
+[size=5][b]Supported Targets[/b][/size]
+
+Super Bow follows the vanilla Queen-arrow damage routes and excludes friendly units. Supported targets include:
+
+[list]
+[*]Hostile GameUnit enemies.
+[*]Damageable AnimalBody targets, including Lava Jelly.
+[*]Damageable MapObj targets, including enemy nests.
+[*]Vanilla bow-damageable EnemyNexus buildings.
+[/list]
+
+Only EnemyCategory.Boss receives the 1% Boss Bleed rate. Every other supported target uses the normal 3% rate.
+
+[size=5][b]Requirements and Compatibility[/b][/size]
+
+[list]
+[*]Ratopia for Windows, Mono build.
+[*]BepInEx 5.4.23.5.
+[*].NET Framework 4.7.2 runtime target.
+[*]Built against Unity 2021.3.21f1 and Harmony 2.9.0.0.
+[*]Inspected Assembly-CSharp.dll SHA-256: C94847D858EED368D2082E9715D0C79DD79309631BEF861C6BEBD467306D6E1D.
+[/list]
+
+BepInEx, Harmony, Unity and game assemblies are not included in the download. Game updates that change Assembly-CSharp.dll may require a compatibility update.
+
+[size=5][b]Installation[/b][/size]
+
+[list=1]
+[*]Close Ratopia completely.
+[*]Back up important files under Ratopia_Data/SaveFile.
+[*]Install BepInEx 5 if it is not already installed.
+[*]Extract the downloaded ZIP into the Ratopia game directory and keep its folder structure.
+[*]Confirm the plugin is located at BepInEx/plugins/SuperBow/SuperBow.dll.
+[*]Launch the game and check BepInEx/LogOutput.log for: 发现插件：超级弓箭 0.1.2.
+[/list]
+
+Do not overwrite the DLL while Ratopia is running, and do not install duplicate copies of the same plugin.
+
+[size=5][b]Reforges and Save Compatibility[/b][/size]
+
+Splash Damage is stored using the vanilla RangeAtk=1 value. Bleed is stored using the vanilla BloodDrain=3 combination. The mod does not add an unknown ability enum to save files.
+
+If the mod is temporarily removed, an existing Bleed reforge remains readable as vanilla BloodDrain=3 but loses the custom bow behavior and label. Reinstalling the mod restores the Bleed label and behavior. Active Bleed states are cleared on scene changes and plugin shutdown.
+
+[size=5][b]Uninstallation[/b][/size]
+
+[list=1]
+[*]Close Ratopia and back up the save folder again.
+[*]Remove BepInEx/plugins/SuperBow/SuperBow.dll, or move the SuperBow plugin folder outside BepInEx/plugins.
+[*]Load a test save first and confirm that it remains readable before continuing a long-term playthrough.
+[/list]
+
+[size=5][b]Known Conflicts[/b][/size]
+
+Other mods that modify WoodBow data, bow reforge pools, Bow_Arrow.OnTriggerEnter2D, DmgEffect.SetDmgEffect or the same ability tooltips may conflict. When troubleshooting, enable only one bow/weapon overhaul at a time.
+
+[size=5][b]Troubleshooting[/b][/size]
+
+When reporting a problem, include BepInEx/LogOutput.log and describe the target type, equipped reforges and whether the direct hit reduced health. Useful Super Bow log lines include confirmed target type, first Splash Damage, first Bleed application and first Bleed tick.
+
+[size=5][b]Credits[/b][/size]
+
+Ratopia and the original Wood Bow icon are © Cassel Games. The cover uses the original icon with permission. BepInEx and Harmony belong to their respective authors and are not redistributed with this mod.
+
+[hr]
+
+[center][size=6][b]超级弓箭[/b][/size]
+[i]专门强化女王原版木弓的战斗 Mod。[/i]
+
+[b]中文[/b][/center]
+
+[size=5][b]概述[/b][/size]
+
+超级弓箭将女王木弓的基础攻击力从 2 提升至 3，使其与贵族剑相同，并为木弓加入两个新的重铸结果：范围攻击和流血。
+
+本 Mod 保留原版弓箭的直接命中、暴击、射程和攻击速度机制。只有当原版箭矢确认造成有效伤害后，才会触发新增的重铸效果。
+
+[size=5][b]功能[/b][/size]
+
+[list]
+[*][b]强化木弓：[/b]基础攻击力从 2 提升至 3。
+[*][b]重铸 1 - 范围攻击：[/b]确认命中后，对主目标周围 1.5 格内的其他有效目标造成箭矢直接伤害 50% 的伤害。
+[*][b]范围伤害不会递归：[/b]范围伤害不会再次触发另一轮范围攻击。
+[*][b]重铸 2 - 流血：[/b]直接命中和成功造成的范围伤害都会施加流血。
+[*][b]普通目标：[/b]流血持续 3 秒，每秒造成目标最大生命值 3% 的伤害。
+[*][b]Boss 目标：[/b]只有被标记为 EnemyCategory.Boss 的敌人才使用降低后的 1% 数值。
+[*][b]伤害数值一致：[/b]百分比伤害四舍五入为整数，0.5 向上取整；只要计算结果为正数，最低造成 1 点伤害。实际扣除的生命值与显示的伤害飘字完全相同。
+[*][b]刷新但不叠加：[/b]重复命中只会刷新 3 秒持续时间，不会产生额外流血层数，也不会推迟下一次已经安排好的流血结算。
+[*][b]暂停时停止计时：[/b]流血使用受游戏时间缩放影响的计时，游戏暂停时不会结算伤害。
+[/list]
+
+[size=5][b]支持目标[/b][/size]
+
+超级弓箭沿用女王原版箭矢的伤害路径，并排除友方单位。支持的目标包括：
+
+[list]
+[*]敌对 GameUnit 单位。
+[*]可受伤的 AnimalBody 目标，包括岩浆水母。
+[*]可受伤的 MapObj 目标，包括敌方巢穴。
+[*]原版弓箭能够伤害的 EnemyNexus 建筑。
+[/list]
+
+只有 EnemyCategory.Boss 使用 1% 的 Boss 流血比例，其他所有受支持的目标统一使用普通的 3% 流血比例。
+
+[size=5][b]环境要求与兼容性[/b][/size]
+
+[list]
+[*]Windows 版 Ratopia，Mono 构建。
+[*]BepInEx 5.4.23.5。
+[*]目标运行时为 .NET Framework 4.7.2。
+[*]基于 Unity 2021.3.21f1 和 Harmony 2.9.0.0 构建。
+[*]开发时检查的 Assembly-CSharp.dll SHA-256：C94847D858EED368D2082E9715D0C79DD79309631BEF861C6BEBD467306D6E1D。
+[/list]
+
+下载包不包含 BepInEx、Harmony、Unity 或游戏程序集。若游戏更新导致 Assembly-CSharp.dll 发生变化，本 Mod 可能需要兼容性更新。
+
+[size=5][b]安装[/b][/size]
+
+[list=1]
+[*]完全关闭 Ratopia。
+[*]备份 Ratopia_Data/SaveFile 下的重要存档。
+[*]如果尚未安装，请先安装 BepInEx 5。
+[*]将下载的 ZIP 解压到 Ratopia 游戏目录，并保留压缩包内的目录结构。
+[*]确认插件位于 BepInEx/plugins/SuperBow/SuperBow.dll。
+[*]启动游戏，并在 BepInEx/LogOutput.log 中确认出现：发现插件：超级弓箭 0.1.2。
+[/list]
+
+请勿在 Ratopia 运行时覆盖 DLL，也不要重复安装同一个插件的多个副本。
+
+[size=5][b]重铸与存档兼容[/b][/size]
+
+范围攻击使用原版 RangeAtk=1 数值保存。流血使用原版 BloodDrain=3 组合保存。本 Mod 不会向存档写入未知的能力枚举。
+
+如果临时移除本 Mod，已有的流血重铸仍能以原版 BloodDrain=3 的形式被存档读取，但会暂时失去自定义弓箭效果和“流血”名称。重新安装本 Mod 后，流血名称和效果会恢复。切换场景或关闭插件时，正在生效的流血状态会被清除。
+
+[size=5][b]卸载[/b][/size]
+
+[list=1]
+[*]关闭 Ratopia，并再次备份存档文件夹。
+[*]删除 BepInEx/plugins/SuperBow/SuperBow.dll，或将 SuperBow 插件文件夹移到 BepInEx/plugins 目录之外。
+[*]先使用测试存档确认存档仍可正常读取，再继续长期游玩。
+[/list]
+
+[size=5][b]已知冲突[/b][/size]
+
+其他修改 WoodBow 数据、弓箭重铸池、Bow_Arrow.OnTriggerEnter2D、DmgEffect.SetDmgEffect 或相同能力提示文本的 Mod 可能产生冲突。排查问题时，建议一次只启用一个弓箭或武器改造 Mod。
+
+[size=5][b]故障排查[/b][/size]
+
+报告问题时，请附上 BepInEx/LogOutput.log，并说明目标类型、当前装备的重铸效果，以及直接命中是否确实扣除了生命值。超级弓箭的有效日志包括：确认目标类型、首次范围攻击、首次施加流血以及首次流血结算。
+
+[size=5][b]致谢[/b][/size]
+
+Ratopia 与原版木弓图标的版权归 Cassel Games 所有。封面经授权使用原版图标。BepInEx 与 Harmony 的版权归各自作者所有，本 Mod 不会重新分发这些组件。

@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <RatopiaDir Condition="'$(RatopiaDir)' == ''">$(RATOPIA_DIR)</RatopiaDir>
+    <BepInExCoreDir>$(RatopiaDir)\BepInEx\core</BepInExCoreDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\UnlimitedTradeAgreements\UnlimitedTradeAgreements.csproj" />
+    <Reference Include="0Harmony" HintPath="$(BepInExCoreDir)\0Harmony.dll" Private="true" />
+    <Reference Include="Mono.Cecil" HintPath="$(BepInExCoreDir)\Mono.Cecil.dll" Private="true" />
+    <Reference Include="System.IO.Compression" Private="true" />
+    <Reference Include="System.IO.Compression.FileSystem" Private="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyMetadata Include="RatopiaDir" Value="$(RatopiaDir)" />
+    <AssemblyMetadata Include="ProjectRoot" Value="$(MSBuildProjectDirectory)\..\.." />
+  </ItemGroup>
+</Project>

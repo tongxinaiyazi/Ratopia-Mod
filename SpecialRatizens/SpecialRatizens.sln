@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialRatizens", "src\SpecialRatizens\SpecialRatizens.csproj", "{39D9467A-CFF0-4F4B-AFE0-F1FD156CF761}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialRatizens.Tests", "tests\SpecialRatizens.Tests\SpecialRatizens.Tests.csproj", "{F020AC07-B72D-4703-A679-B8775057CE8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39D9467A-CFF0-4F4B-AFE0-F1FD156CF761}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39D9467A-CFF0-4F4B-AFE0-F1FD156CF761}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39D9467A-CFF0-4F4B-AFE0-F1FD156CF761}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39D9467A-CFF0-4F4B-AFE0-F1FD156CF761}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F020AC07-B72D-4703-A679-B8775057CE8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F020AC07-B72D-4703-A679-B8775057CE8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F020AC07-B72D-4703-A679-B8775057CE8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F020AC07-B72D-4703-A679-B8775057CE8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

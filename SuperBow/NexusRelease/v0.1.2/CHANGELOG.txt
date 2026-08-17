@@ -1,0 +1,11 @@
+Version 0.1.2
+
+- Increased the vanilla Wood Bow base ATK from 2 to 3.
+- Added the Reforge 1 Splash Damage outcome: 1.5-tile radius and 50% direct damage.
+- Added the Reforge 2 Bleed outcome: three one-second ticks at 3% maximum health for normal targets and 1% for EnemyCategory.Boss.
+- Added Bleed application and refresh from successful splash hits.
+- Added support for hostile GameUnit, AnimalBody, MapObj and vanilla bow-damageable EnemyNexus targets.
+- Excluded friendly GameUnit targets and ordinary friendly buildings from splash selection.
+- Made percentage damage use nearest-integer rounding so actual health loss and floating damage text match.
+- Changed the in-game Bleed tooltip to display only 流血.
+- Added scene-change and shutdown cleanup for active Bleed states.

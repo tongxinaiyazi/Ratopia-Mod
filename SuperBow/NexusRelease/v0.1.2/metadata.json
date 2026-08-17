@@ -1,0 +1,23 @@
+{
+  "game": "Ratopia",
+  "title": "Super Bow - Splash Damage and Bleed for the Queen's Bow",
+  "summary": "Upgrades the Queen's Wood Bow to Noble Sword-level damage and adds splash damage and max-health bleed reforges, with boss scaling and support for every non-friendly target the vanilla bow can damage.",
+  "version": "0.1.2",
+  "main_file_display_name": "Super Bow v0.1.2 - BepInEx 5",
+  "main_file": "files/SuperBow-v0.1.2-BepInEx5.zip",
+  "cover": "images/SuperBow-Cover-1280x720.png",
+  "original_icon": "images/WoodBow-Original-100x100.png",
+  "category_recommendation": "Gameplay if available; otherwise Miscellaneous",
+  "tags": [
+    "Gameplay",
+    "Weapons",
+    "Quality of Life"
+  ],
+  "requirements": [
+    "Ratopia Windows Mono build",
+    "BepInEx 5.4.23.5"
+  ],
+  "adult_content": false,
+  "ai_assistance_disclosure": true,
+  "nexus_2026_anniversary_event_eligible": false
+}

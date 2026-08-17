@@ -1,0 +1,1 @@
+Upgrades the Queen's Wood Bow to Noble Sword-level damage and adds splash damage and max-health bleed reforges, with boss scaling and support for every non-friendly target the vanilla bow can damage.

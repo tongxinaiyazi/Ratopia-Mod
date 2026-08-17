@@ -1,0 +1,6 @@
+Main file name: Super Bow v0.1.2 - BepInEx 5
+Version: 0.1.2
+
+Main release for Ratopia's BepInEx 5 Mono runtime. Extract the archive into the Ratopia game directory. The plugin will be installed to BepInEx/plugins/SuperBow/SuperBow.dll.
+
+Requires BepInEx 5.4.23.5. BepInEx, Harmony, Unity and game DLLs are not included.

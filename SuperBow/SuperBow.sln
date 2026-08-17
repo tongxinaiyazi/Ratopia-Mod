@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperBow", "src\\SuperBow\\SuperBow.csproj", "{62C78A39-9FC6-4DB0-9F86-9E51E7F08E4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperBow.Tests", "tests\\SuperBow.Tests\\SuperBow.Tests.csproj", "{F66C0B74-F21B-4996-B1C1-7040660A9B47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62C78A39-9FC6-4DB0-9F86-9E51E7F08E4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62C78A39-9FC6-4DB0-9F86-9E51E7F08E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62C78A39-9FC6-4DB0-9F86-9E51E7F08E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62C78A39-9FC6-4DB0-9F86-9E51E7F08E4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F66C0B74-F21B-4996-B1C1-7040660A9B47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F66C0B74-F21B-4996-B1C1-7040660A9B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F66C0B74-F21B-4996-B1C1-7040660A9B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F66C0B74-F21B-4996-B1C1-7040660A9B47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
