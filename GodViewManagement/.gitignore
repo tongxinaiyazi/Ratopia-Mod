@@ -1,0 +1,27 @@
+# Build and test output
+**/bin/
+**/obj/
+TestResults/
+artifacts/
+dist/
+
+# Local IDE and agent state
+.vs/
+.idea/
+.vscode/
+.superpowers/
+*.user
+*.suo
+
+# Runtime, logs, backups, and packaged archives
+*.dll
+*.pdb
+*.exe
+*.log
+*.bak
+*.zip
+*.standalone-disabled
+
+# OS metadata
+Thumbs.db
+.DS_Store
