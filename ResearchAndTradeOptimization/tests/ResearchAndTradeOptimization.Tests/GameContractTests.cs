@@ -177,6 +177,18 @@ namespace ResearchAndTradeOptimization.Tests
                     "CasselGames.Diplomatic.UI.DiplomaticUI",
                     "_sheetUI",
                     "CasselGames.Diplomatic.UI.DiplomaticTradeSheetUI");
+                AssertPrivateField(module,
+                    "CasselGames.Diplomatic.UI.DiplomaticWorldDetailResourceLayoutUI",
+                    "_slotsUI",
+                    "System.Collections.Generic.List`1<CasselGames.Diplomatic.UI.DiplomaticWorldDetailResourceSlotUI>");
+                AssertPrivateField(module,
+                    "CasselGames.Diplomatic.UI.DiplomaticWorldDetailResourceSlotUI",
+                    "_tileType",
+                    "TileType");
+                AssertPrivateField(module,
+                    "CasselGames.Diplomatic.UI.DiplomaticWorldDetailResourceSlotUI",
+                    "_icon",
+                    "UnityEngine.UI.Image");
 
                 AssertMethod(module,
                     "CasselGames.Diplomatic.UI.DiplomaticUI",
@@ -193,6 +205,22 @@ namespace ResearchAndTradeOptimization.Tests
                     "CasselGames.Diplomatic.Data.DiplomaticCountryTradeSheetData",
                     "CasselGames.Diplomatic.UI.TypeTradeSheet",
                     "System.Boolean");
+                AssertMethod(module,
+                    "CasselGames.Diplomatic.Data.DiplomaticCountryTradeSheetData",
+                    "IsInfinitePeriod",
+                    "System.Boolean");
+                AssertMethod(module,
+                    "CasselGames.Diplomatic.Data.DiplomaticCountryTradeSheetData",
+                    "IsEnded",
+                    "System.Boolean");
+                AssertMethod(module,
+                    "CasselGames.Diplomatic.Data.DiplomaticCountryTradeSheetData",
+                    "get_Resource",
+                    "TileType");
+                AssertMethod(module,
+                    "CasselGames.Diplomatic.Data.DiplomaticCountryData",
+                    "get_Sheets",
+                    "System.Collections.Generic.List`1<CasselGames.Diplomatic.Data.DiplomaticCountryTradeSheetData>");
             }
         }
 

@@ -108,6 +108,7 @@ namespace ResearchAndTradeOptimization.Patches
         internal static void Postfix(DiplomaticWorldDetailUI __instance)
         {
             TradeQueueRuntime.UpdateWorldDetailLabel(__instance);
+            TradeResourceStateRuntime.ApplyActiveTradeHighlight(__instance);
         }
     }
 
