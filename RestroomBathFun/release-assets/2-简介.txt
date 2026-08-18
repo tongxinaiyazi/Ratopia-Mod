@@ -1,0 +1,1 @@
+Adds configurable fun after completed restroom services: +25 for the regular restroom and +30 for the bathhouse by default. Electric toilets are not affected. / 鼠民完整使用普通卫生间后默认增加 25 乐趣，完整使用澡堂后默认增加 30 乐趣；电动卫生间不生效，奖励可通过 BepInEx 配置文件修改。

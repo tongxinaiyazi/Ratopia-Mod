@@ -1,0 +1,2 @@
+Expands ratizen tool work range to 2 tiles horizontally and 4 tiles high, including diagonal positions.
+将鼠民工具工作范围扩大到横向 2 格、最高 4 格，并包含斜角站位。

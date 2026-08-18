@@ -1,0 +1,3 @@
+Stronger Work Distance v0.1.0 for Ratopia with BepInEx 5. Extract the ZIP into the game directory; the plugin will be installed at BepInEx/plugins/StrongerWorkDistance/StrongerWorkDistance.dll. The archive does not include BepInEx, Harmony, Unity, or game DLLs.
+
+适用于 Ratopia 与 BepInEx 5 的“更强大的工作距离”v0.1.0。将 ZIP 解压到游戏目录，插件会位于 BepInEx/plugins/StrongerWorkDistance/StrongerWorkDistance.dll。压缩包不包含 BepInEx、Harmony、Unity 或游戏 DLL。

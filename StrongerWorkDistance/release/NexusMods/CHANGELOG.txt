@@ -1,0 +1,13 @@
+v0.1.0
+
+English
+- Initial release.
+- Expanded shared ratizen tool work positions to a complete 25-position rectangle: x=-2..2 and y=+1..-3.
+- Preserved the original 12 positions and their order before appending the 13 new positions.
+- Applied the change to normal work positions and shared ladder/special-blueprint positions.
+
+中文
+- 首次发布。
+- 将鼠民通用工具工作范围扩大为完整的 25 个站位矩形：x=-2..2、y=+1..-3。
+- 保留原版 12 个站位及其顺序，再追加 13 个新增站位。
+- 同时应用于常规工作站位和梯子/特殊蓝图共用站位。

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">God View Management</title>
+  <desc id="desc">Dark navy and gold title card for the God View Management Ratopia mod.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050b14"/>
+      <stop offset="0.5" stop-color="#0b1727"/>
+      <stop offset="1" stop-color="#111f33"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="44%" r="58%">
+      <stop offset="0" stop-color="#39577d" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#07101c" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#7890aa" stroke-opacity="0.075" stroke-width="1"/>
+      <circle cx="0" cy="0" r="2" fill="#d7b66f" fill-opacity="0.12"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="blur"/>
+      <feOffset dy="8" result="offset"/>
+      <feColorMatrix in="offset" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <rect x="72" y="72" width="1456" height="756" rx="18" fill="url(#grid)" stroke="#c5a15a" stroke-opacity="0.62" stroke-width="2"/>
+  <path d="M300 278H620M980 278H1300" stroke="#c5a15a" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="800" cy="278" r="7" fill="#c5a15a"/>
+  <g text-anchor="middle" filter="url(#shadow)" font-family="Segoe UI, Arial, sans-serif">
+    <text x="800" y="465" fill="#f5ead2" font-size="154" font-weight="700" letter-spacing="22">GOD VIEW</text>
+    <text x="800" y="606" fill="#d3ad62" font-size="92" font-weight="600" letter-spacing="18">MANAGEMENT</text>
+  </g>
+  <path d="M510 670H1090" stroke="#c5a15a" stroke-opacity="0.7" stroke-width="2"/>
+  <path d="M780 690L800 710L820 690L800 670Z" fill="#c5a15a" fill-opacity="0.72"/>
+</svg>

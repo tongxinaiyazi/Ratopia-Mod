@@ -1,0 +1,3 @@
+EN: Lets televisions find and use working broadcast stations anywhere on the map without changing television service distance or electrical connection range.
+
+中文：让地图任意位置的电视都能发现并使用工作的广播站，同时保持电视服务距离和建筑电路范围为原版数值。

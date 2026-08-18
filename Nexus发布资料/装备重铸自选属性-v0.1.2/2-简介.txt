@@ -1,3 +1,0 @@
-Choose the exact vanilla reforge effect for equipment at the Royal Smithy and Lava Smithy. Select directly from Ratopia's original beige effect list with full-row mouse controls, number keys, or keyboard navigation—without changing material costs, effect values, achievements, or the vanilla save format.
-
-在皇家铁匠铺和熔岩铁匠铺为装备自选原版重铸属性。直接在游戏原有的米色效果列表中整行点击，或使用数字键与键盘导航选择；不改变材料消耗、属性数值、成就和原版存档格式。
