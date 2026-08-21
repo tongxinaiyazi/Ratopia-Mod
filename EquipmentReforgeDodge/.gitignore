@@ -1,0 +1,9 @@
+**/bin/
+**/obj/
+artifacts/
+dist/
+backups/
+.superpowers/
+TestResults/
+*.user
+*.suo
