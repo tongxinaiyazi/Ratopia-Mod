@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquipmentReforgeDodge", "src\EquipmentReforgeDodge\EquipmentReforgeDodge.csproj", "{8F4C2B7A-6E21-4D9C-9B3F-0A5D7E1C4F82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquipmentReforgeDodge.Tests", "tests\EquipmentReforgeDodge.Tests\EquipmentReforgeDodge.Tests.csproj", "{3B9E5D61-92C7-4A48-8E2D-C71F5B0A9E13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F4C2B7A-6E21-4D9C-9B3F-0A5D7E1C4F82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F4C2B7A-6E21-4D9C-9B3F-0A5D7E1C4F82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F4C2B7A-6E21-4D9C-9B3F-0A5D7E1C4F82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F4C2B7A-6E21-4D9C-9B3F-0A5D7E1C4F82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B9E5D61-92C7-4A48-8E2D-C71F5B0A9E13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B9E5D61-92C7-4A48-8E2D-C71F5B0A9E13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B9E5D61-92C7-4A48-8E2D-C71F5B0A9E13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B9E5D61-92C7-4A48-8E2D-C71F5B0A9E13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
